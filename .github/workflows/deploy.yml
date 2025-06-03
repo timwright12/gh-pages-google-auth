@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+
+        - name: Setup node
+          uses: actions/setup-node@v4
+          with:
+            node-version-file: './.nvmrc'
+
+        - name: Setup CI
+          run: npm ci
+
+        - name: Run site build
+          run: npm run predeploy && npm run deploy
+
+        - name: Setup Github Pages
+          uses: peaceiris/actions-gh-pages@v4
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./build
