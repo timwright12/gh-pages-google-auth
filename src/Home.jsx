@@ -29,7 +29,7 @@ export default function Home() {
   function handleCredentialResponse(response) {
     const user = parseJwt(response.credential);
     localStorage.setItem('user', JSON.stringify(user));
-    window.location.href = '/google-login-react/welcome';
+    window.location.href = '/gh-pages-google-auth/welcome';
   }
 
   return (

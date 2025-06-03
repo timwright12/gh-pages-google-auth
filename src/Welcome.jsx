@@ -22,7 +22,6 @@ export default function Welcome() {
   return (
     <div style={{ padding: '2rem', textAlign: 'center' }}>
       <h1>Welcome, {user.name}</h1>
-      <img src={user.picture} alt="Profile" width="100" />
       <p>Email: {user.email}</p>
       <button onClick={logout}>Logout</button>
     </div>
