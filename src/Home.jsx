@@ -33,9 +33,11 @@ export default function Home() {
   }
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Login with Google</h1>
-      <div id="google-button"></div>
+    <div className='feedback'>
+      <div>
+        <h1>Login with Google</h1>
+        <span id="google-button"></span>
+      </div>
     </div>
   );
 }

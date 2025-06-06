@@ -26,6 +26,64 @@
       }(window.location))
     </script>
     <title>Google Login App</title>
+
+    <style>
+      :root {
+        --c-white: #ffffff;
+        --c-gray1: #f4f4f4;
+        --blue1: #4285f4;
+        --blue2: #357ae8;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: var(--c-gray1);
+      }
+      button {
+        background-color: var(--blue1);
+        color: var(--c-white);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: var(--blue2);;
+      }
+      .feedback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .g_id_signin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        width: 300px;
+      }
+      .g_id_signin div {
+        width: 100%;
+      }
+      .g_id_signin button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 0;
+        background-color: var(--blue1);;
+        color: var(--c-white);
+      }
+      .g_id_signin button:hover {
+        background-color: var(--blue2);;
+      }
+      .g_id_signin button:active {
+        background-color: var(--blue2);;
+      }   
+    </style>
+
     <script src="https://accounts.google.com/gsi/client" async defer></script>
   </head>
   <body>
