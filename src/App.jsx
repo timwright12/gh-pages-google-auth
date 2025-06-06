@@ -5,7 +5,7 @@ import Welcome from './Welcome';
 
 export default function App() {
   return (
-    <BrowserRouter basename='gh-pages-google-auth'>
+    <BrowserRouter basename='/gh-pages-google-auth'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/welcome" element={<Welcome />} />
